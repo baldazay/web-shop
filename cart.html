@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Registration</title>
+    <title>Shopping Cart</title>
 </head>
 
 <body>
@@ -129,60 +129,87 @@
     <main>
         <section class="page-heading">
             <div class="container">
-                <h1 class="page-heading__title pink">registration</h1>
+                <h1 class="page-heading__title pink">shopping cart</h1>
             </div>
         </section>
-        <section class="reg">
-            <div class="reg-wrp container">
-                <div class="reg__form-wrp">
-                    <form class="reg__form">
-                        <fieldset>
-                            <legend class="reg__form-title">Your Name</legend>
-                            <label class="invisible" for="name">Name</label>
-                            <input class="reg__form-input input-style" type="text" id="name" placeholder="First Name">
-                            <label class="invisible" for="surname">Surname</label>
-                            <input class="reg__form-input input-style" type="text" id="surname" placeholder="Last Name">
-                            <input class="reg__form-radio" type="radio" id="man" value="Man">
-                            <label for="man">Man</label>
-                            <input class="reg__form-radio" type="radio" id="woman" value="Woman">
-                            <label for="woman">Woman</label>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="reg__form-title">Login details</legend>
-                            <label class="invisible" for="email">Email</label>
-                            <input class="reg__form-input input-style" type="email" id="email" placeholder="Email">
-                            <label class="invisible" for="password">Password</label>
-                            <input class="reg__form-input input-style" type="password" id="password"
-                                placeholder="Password">
-                        </fieldset>
-                        <p class="reg__form-text">Please use 8 or more characters, with at least 1 number and a mixture
-                            of uppercase and lowercase letters</p>
-                        <button class="reg__form-btn" type="submit"><span class="reg__form-btn-name">join now</span><svg
-                                width="17" height="10" viewBox="0 0 17 10" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z" />
-                            </svg></button>
-                    </form>
-                </div>
-                <div class="reg__bonus-wrp">
-                    <h2 class="reg__bonus-title">loyalty has its perks</h2>
-                    <p class="reg__bonus-text">Get in on the loyalty program where you can earn points and unlock
-                        serious perks. Starting with
-                        these as soon as you join:</p>
-                    <ul class="reg__bonus-list">
-                        <li class="reg__bonus-item">15% off welcome offer</li>
-                        <li class="reg__bonus-item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="reg__bonus-item">$10 off a purchase on your birthday</li>
-                        <li class="reg__bonus-item">Early access to products</li>
-                        <li class="reg__bonus-item">Exclusive offers & rewards</li>
+        <section class="cart">
+            <div class="cart__wrp container">
+                <div class="cart__goods">
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <div class="cart__item-wrp">
+                                <div><img src="images/item-3.png" alt="item-3" width="262" height="306"></div>
+                                <div class="cart__item-property-wrp">
+                                    <h2 class="cart__item-title">mango people t-shirt</h2>
+                                    <ul class="cart__item-property">
+                                        <li class="cart__item-property-descr">Price: <span class="pink">$300</span></li>
+                                        <li class="cart__item-property-descr">Color: Red</li>
+                                        <li class="cart__item-property-descr">Size: Xl</li>
+                                        <li class="cart__item-property-descr">Quantity:</li>
+                                    </ul>
+                                </div>
+                                <button class="cart__item-btn" type="button"><svg width="18" height="18"
+                                        viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="cart__item">
+                            <div class="cart__item-wrp">
+                                <div><img src="images/item-7.jpg" alt="item-7"></div>
+                                <div class="cart__item-property-wrp">
+                                    <h2 class="cart__item-title">mango people t-shirt</h2>
+                                    <ul class="cart__item-property-list">
+                                        <li class="cart__item-property-descr">Price: <span class="pink">$300</span></li>
+                                        <li class="cart__item-property-descr">Color: Red</li>
+                                        <li class="cart__item-property-descr">Size: Xl</li>
+                                        <li class="cart__item-property-descr">Quantity:</li>
+                                    </ul>
+                                </div>
+                                <button class="cart__item-btn" type="button"><svg width="18" height="18"
+                                        viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
                     </ul>
+                    <div class="cart__btn-wrp">
+                        <button class="cart__btn" type="button">clear shopping cart</button>
+                        <button class="cart__btn" type="button">continue shopping</button>
+                    </div>
+                </div>
+                <div class="cart__delivery">
+                    <div class="cart__address">
+                        <form class="cart__form">
+                            <fieldset>
+                                <legend class="cart__form-title">shipping adress</legend>
+                                <label class="invisible" for="country">Country</label>
+                                <input class="cart__form-input input-style" type="text" id="country"
+                                    placeholder="Country">
+                                <label class="invisible" for="state">State</label>
+                                <input class="cart__form-input input-style" type="text" id="state" placeholder="State">
+                                <label class="invisible" for="postcode">Postcode</label>
+                                <input class="cart__form-input input-style" type="text" id="postcode"
+                                    placeholder="Postcode">
+                                <button class="cart__form-btn" type="submit">get a quote</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="cart__payment">
+                        <p class="cart__payment-text">sub total <span>$900</span></p>
+                        <h2 class="cart__payment-heading">grand total <span
+                                class="cart__payment-subheading pink">$900</span></h2>
+                        <hr>
+                        <button class="cart__payment-btn" type="button">proceed to checkout</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
 
     <footer class="footer">
         <section class="footer__subscribe">
@@ -245,6 +272,7 @@
         </section>
 
     </footer>
+
 </body>
 
 </html>

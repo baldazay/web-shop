@@ -1,0 +1,37 @@
+.header__nav {
+
+    .nav-sub-item__title {
+        display: block;
+        @include font;
+        color: $dark-pink;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 20px 0 1px 0;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $black;
+        }
+    }
+
+    .nav-sub-item__item-link {
+        display: block;
+        @include font;
+        color: #6F6E6E;
+        text-decoration: none;
+        margin: 11px 0 0 21px;
+
+        &:hover {
+            color: $black;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $dark-pink;
+        }
+    }
+}

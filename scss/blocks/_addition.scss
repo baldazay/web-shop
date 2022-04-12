@@ -1,0 +1,29 @@
+.addition {
+    background-color: $black;
+    height: 341px;
+
+    .addition__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .addition__item {
+        width: 360px;
+        height: 134px;
+        text-align: center;
+        margin: 103px 0 0 0;
+    }
+
+    .addition__title {
+        @include font(20px, 24px);
+        color: #FBFBFB;
+        margin: 28px 0 16px 0;
+    }
+
+    .addition__text {
+        @include font(14px, 17px);
+        color: #FBFBFB;
+        margin: 0 0 104px 0;
+    }
+}
