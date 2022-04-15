@@ -44,6 +44,16 @@
         color: #575757;
     }
 
+    input[type="number"] {
+        width: 30px;
+        height: 22px;
+        border: 1px solid #EAEAEA;
+        margin: 0 0 0 25px;
+        padding: 0 0 0 12px;
+        text-align: center;
+        @include font(18px, 21px);
+    }
+
     .cart__item-btn {
         position: absolute;
         background-color: transparent;
@@ -85,14 +95,17 @@
         &:hover,
         &:focus {
             outline: 2px solid $dark-pink;
-            border-radius: 5px;
+            background: transparent;
+            color: $dark-pink;
+            cursor: pointer;
+            fill: $dark-pink;
         }
 
         &:active {
-            outline: 2px solid $black;
-            background-color: rgb(169, 169, 169);
+            outline: 2px solid $dark-pink;
+            background-color: $black;
             color: $white;
-            border-radius: 5px;
+            fill: $white;
         }
     }
 
@@ -125,14 +138,17 @@
         &:hover,
         &:focus {
             outline: 2px solid $dark-pink;
-            border-radius: 5px;
+            background: transparent;
+            color: $dark-pink;
+            cursor: pointer;
+            fill: $dark-pink;
         }
 
         &:active {
-            outline: 2px solid $black;
-            background-color: rgb(169, 169, 169);
+            outline: 2px solid $dark-pink;
+            background-color: $black;
             color: $white;
-            border-radius: 5px;
+            fill: $white;
         }
     }
 

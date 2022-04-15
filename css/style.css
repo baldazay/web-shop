@@ -306,6 +306,18 @@ header {
   color: #575757;
 }
 
+.cart input[type="number"] {
+  width: 30px;
+  height: 22px;
+  border: 1px solid #EAEAEA;
+  margin: 0 0 0 25px;
+  padding: 0 0 0 12px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
 .cart .cart__item-btn {
   position: absolute;
   background-color: transparent;
@@ -348,14 +360,17 @@ header {
 
 .cart .cart__btn:hover, .cart .cart__btn:focus {
   outline: 2px solid #F16D7F;
-  border-radius: 5px;
+  background: transparent;
+  color: #F16D7F;
+  cursor: pointer;
+  fill: #F16D7F;
 }
 
 .cart .cart__btn:active {
-  outline: 2px solid #222222;
-  background-color: darkgray;
+  outline: 2px solid #F16D7F;
+  background-color: #222222;
   color: #F8F8F8;
-  border-radius: 5px;
+  fill: #F8F8F8;
 }
 
 .cart .cart__delivery {
@@ -391,14 +406,17 @@ header {
 
 .cart .cart__form-btn:hover, .cart .cart__form-btn:focus {
   outline: 2px solid #F16D7F;
-  border-radius: 5px;
+  background: transparent;
+  color: #F16D7F;
+  cursor: pointer;
+  fill: #F16D7F;
 }
 
 .cart .cart__form-btn:active {
-  outline: 2px solid #222222;
-  background-color: darkgray;
+  outline: 2px solid #F16D7F;
+  background-color: #222222;
   color: #F8F8F8;
-  border-radius: 5px;
+  fill: #F8F8F8;
 }
 
 .cart .cart__payment {
@@ -789,16 +807,45 @@ header {
   outline: 2px solid #F16D7F;
 }
 
+.header .header__search-form {
+  position: relative;
+}
+
+.header .header__search-input {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid #F8F8F8;
+  border-radius: 5px;
+  color: #F8F8F8;
+  height: 35px;
+  top: 3px;
+  left: 40px;
+  padding: 0 0 0 40px;
+}
+
+.header .header__search-input:focus {
+  outline: 2px solid #F16D7F;
+  border-radius: 5px;
+}
+
 .header .header__search-btn {
+  position: absolute;
+  top: 1px;
+  z-index: 2;
   background-color: transparent;
   border: none;
   fill: #fff;
   cursor: pointer;
-  margin: 0 0 0 40px;
+  margin: 5px 0 0 40px;
 }
 
-.header .header__search-btn:hover {
+.header .header__search-btn:hover, .header .header__search-btn:focus {
   fill: #F16D7F;
+}
+
+.header .header__search-btn:active {
+  fill: #4F4745;
 }
 
 .header .header__list {
@@ -851,7 +898,7 @@ header {
   border: none;
   background-color: transparent;
   top: 16px;
-  right: 16px;
+  right: 30px;
 }
 
 .header .header__link {
@@ -862,6 +909,10 @@ header {
   fill: #F16D7F;
 }
 
+.header .header__link:active {
+  fill: #4F4745;
+}
+
 .header .header__title {
   font-size: 14px;
   line-height: 17px;
@@ -869,6 +920,20 @@ header {
   color: #222222;
   text-transform: uppercase;
   margin: 0 0 4px 0;
+}
+
+.header__nav .header__nav-button {
+  padding: 3px 3px 0 3px;
+}
+
+.header__nav .header__nav-button:hover, .header__nav .header__nav-button:focus {
+  outline: 1px solid #222222;
+}
+
+.header__nav .header__nav-button:active {
+  outline: 1px solid #222222;
+  background-color: #222222;
+  fill: #F8F8F8;
 }
 
 .header__nav .nav-sub-item__title {

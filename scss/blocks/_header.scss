@@ -27,15 +27,45 @@
         }
     }
 
+    .header__search-form {
+        position: relative;
+    }
+
+    .header__search-input {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: 2px solid $white;
+        border-radius: 5px;
+        color: $white;
+        height: 35px;
+        top: 3px;
+        left: 40px;
+        padding: 0 0 0 40px;
+
+        &:focus {
+            outline: 2px solid $dark-pink;
+            border-radius: 5px;
+        }
+    }
+
     .header__search-btn {
+        position: absolute;
+        top: 1px;
+        z-index: 2;
         background-color: transparent;
         border: none;
         fill: #fff;
         cursor: pointer;
-        margin: 0 0 0 40px;
+        margin: 5px 0 0 40px;
 
-        &:hover {
+        &:hover,
+        &:focus {
             fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
         }
     }
 
@@ -89,7 +119,7 @@
         border: none;
         background-color: transparent;
         top: 16px;
-        right: 16px;
+        right: 30px;
     }
 
     .header__link {
@@ -98,6 +128,10 @@
         &:hover,
         &:focus {
             fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
         }
     }
 
