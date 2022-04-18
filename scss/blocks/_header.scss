@@ -35,7 +35,6 @@
         position: absolute;
         background-color: transparent;
         border: none;
-        outline: 2px solid $white;
         border-radius: 5px;
         color: $white;
         height: 35px;
@@ -46,6 +45,14 @@
         &:focus {
             outline: 2px solid $dark-pink;
             border-radius: 5px;
+        }
+
+        @include tablet {
+            width: 230px;
+        }
+
+        @include mobile {
+            width: 130px;
         }
     }
 
@@ -75,6 +82,10 @@
 
     .header__item {
         margin: 0 0 0 33px;
+
+        @include mobile {
+            margin: 0;
+        }
     }
 
     .header__nav-wrp {
@@ -112,6 +123,13 @@
         &:hover {
             display: block;
         }
+
+        @include mobile {
+            width: 342px;
+            top: -23px;
+            right: -16px;
+            z-index: 2;
+        }
     }
 
     .header__nav-button {
@@ -124,6 +142,10 @@
 
     .header__link {
         fill: #fff;
+
+        @include mobile {
+            display: none;
+        }
 
         &:hover,
         &:focus {
