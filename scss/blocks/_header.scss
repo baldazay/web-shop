@@ -10,6 +10,10 @@
 
     .header__logo-wrp {
         display: flex;
+
+        @include tablet {
+            margin: 0 0 0 20px;
+        }
     }
 
     .header__logo-link {
@@ -78,6 +82,10 @@
 
     .header__list {
         display: flex;
+
+        @include tablet {
+            margin: 0 20px 0 0;
+        }
     }
 
     .header__item {
@@ -119,6 +127,7 @@
         /* top: 54px; */
         padding: 37px 0 30px 34px;
         box-shadow: -1px 5px 12px -4px rgba(0, 0, 0, 0.54);
+        z-index: 2;
 
         &:hover {
             display: block;
@@ -127,9 +136,12 @@
         @include mobile {
             width: 342px;
             top: -23px;
-            right: -16px;
-            z-index: 2;
+            right: -28px;
         }
+    }
+
+    .display-block {
+        display: block;
     }
 
     .header__nav-button {

@@ -1,10 +1,13 @@
 .reg {
-    height: 675px;
+    min-height: 675px;
 
     .reg-wrp {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 
     .reg__form-wrp {
@@ -74,7 +77,15 @@
 
     .reg__bonus-wrp {
         width: 630px;
-        height: 334px;
+        min-height: 334px;
+
+        @include tablet {
+            width: 354px;
+        }
+
+        @include mobile {
+            margin: 0 0 100px 0;
+        }
     }
 
     .reg__bonus-title {
@@ -88,6 +99,10 @@
         @include font(24px, 29px, 300);
         color: $black;
         margin: 22px 0 21px 0;
+
+        @include tablet {
+            @include font(16px, 19px);
+        }
     }
 
     .reg__bonus-list {
@@ -98,6 +113,10 @@
         margin: 0 0 16px 0;
         @include font(24px, 29px, 300);
         color: $black;
+
+        @include tablet {
+            @include font(16px, 19px);
+        }
 
         &:before {
             content: url('../images/check-mark.png');

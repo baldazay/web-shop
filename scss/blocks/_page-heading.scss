@@ -6,5 +6,9 @@
         @include font(24px, 29px);
         text-transform: uppercase;
         padding: 60px 0 0 0;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 }
