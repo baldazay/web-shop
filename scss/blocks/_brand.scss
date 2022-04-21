@@ -2,7 +2,7 @@
     display: flex;
     background-color: $light-pink;
 
-    @include mobile {
+    @include tablet-s {
         height: 363px;
     }
 
@@ -10,9 +10,13 @@
         width: 50%;
         height: auto;
 
-        @include mobile {
+        @include tablet-s {
             display: none;
         }
+
+        /* @include mobile {
+            display: none;
+        } */
     }
 
     .brand__title-wrp {
@@ -21,8 +25,17 @@
         align-items: center;
         padding: 0 0 0 88px;
 
+        @include laptop {
+            padding: 0 0 0 67px;
+        }
+
         @include tablet {
             padding: 0 0 0 67px;
+        }
+
+        @include tablet-s {
+            min-height: 150px;
+            padding: 0 0 0 100px;
         }
 
         @include mobile {
@@ -31,17 +44,26 @@
     }
 
     .brand__title {
+        width: 70%;
         text-transform: uppercase;
         @include font(48px, 58px, 900);
         color: $black;
         position: relative;
 
-        @include tablet {
-            @include font(44px, 53px);
+        @include laptop {
+            width: 80%;
+            @include font(42px, 50px, 900);
+        }
+
+        @include tablet-s {
+            width: 80%;
+            @include font(38px, 46px, 900);
+            margin: 0 auto;
         }
 
         @include mobile {
-            @include font(38px, 46px);
+            width: 85%;
+            @include font(38px, 46px, 900);
         }
     }
 
@@ -64,12 +86,16 @@
         display: block;
         @include font(37px, 44px, 700);
 
-        @include tablet {
-            @include font(24px, 29px);
+        @include laptop {
+            @include font(24px, 29px, 700);
+        }
+
+        @include tablet-s {
+            @include font(22px, 26px, 700);
         }
 
         @include mobile {
-            @include font(20px, 24px);
+            @include font(20px, 24px, 700);
         }
     }
 
