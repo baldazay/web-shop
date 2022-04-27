@@ -24,11 +24,23 @@
     .catalog__item {
         background: $white;
         margin: 30px 0 0 0;
+        width: 31.6%;
+        max-width: 360px;
+
+        @include tablet {
+            width: 49%;
+        }
+
+        @include mobile-xl {
+            width: 89%;
+            margin: 17px auto;
+        }
     }
 
     .catalog__item-wrp {
-        width: 360px;
-        height: 581px;
+        width: 100%;
+        max-width: 360px;
+        max-height: 581px;
 
         &:hover .catalog__item-overlay:before,
         &:hover .catalog__item-btn {
@@ -59,6 +71,10 @@
         }
     }
 
+    .catalog__img {
+        width: 100%;
+    }
+
     .catalog__item-btn {
         position: absolute;
         top: 50%;
@@ -68,12 +84,19 @@
         background-color: transparent;
         width: 138px;
         height: 43px;
-        border: 1px solid $white;
+        border: none;
+        outline: 1px solid $white;
         color: $white;
         @include font;
         text-align: start;
         padding: 5px 0 5px 13px;
         display: none;
+        transition: outline 0.3s linear;
+
+        &:hover,
+        &:focus {
+            outline: 3px solid $dark-pink;
+        }
     }
 
     .catalog__item-btn-value {
@@ -97,7 +120,7 @@
 
     .catalog__item-title-price {
         @include font(16px, 19px);
-        margin: 18px 0 0 18px;
+        margin: 18px 0 20px 18px;
     }
 
     .catalog__btn-wrp {
@@ -115,6 +138,7 @@
         text-decoration: none;
         color: $dark-pink;
         margin: 0 auto;
+        transition: background-color 1s linear;
 
         &:hover,
         &:focus {

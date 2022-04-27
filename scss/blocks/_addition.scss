@@ -1,35 +1,58 @@
 .addition {
     background-color: $black;
-    min-height: 341px;
+    height: 341px;
 
     @include tablet {
-        padding: 0 210px 64px 210px;
+        height: 610px;
+        margin: 0 auto;
     }
 
+    @include tablet-s {}
+
     @include mobile {
-        padding: 0 18px 81px 18px;
+        padding: 0;
+        text-align: center;
     }
 
     .addition__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        min-height: 341px;
     }
 
     .addition__item {
-        width: 360px;
-        height: 134px;
+        width: 31.6%;
+        max-width: 360px;
+        min-height: 134px;
         text-align: center;
         margin: 103px 0 0 0;
 
         @include tablet {
-            margin: 48px 0 0 0;
+            width: 100%;
+            min-width: 360px;
+            height: 134px;
+            margin: 48px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        @include mobile-xl {
+            width: 89%;
+            margin: 17px auto;
+            padding: 0;
         }
 
         @include mobile {
             margin: 48px 0 0 0;
         }
 
+        &:first-child>.addition__img {
+            padding: 8px 0 0 0;
+        }
+
+        &:last-child>.addition__img {
+            padding: 5px 0 0 0;
+        }
     }
 
     .addition__title {
@@ -46,5 +69,9 @@
         @include font(14px, 17px);
         color: #FBFBFB;
         margin: 0 0 104px 0;
+
+        @include tablet {
+            margin: 0;
+        }
     }
 }

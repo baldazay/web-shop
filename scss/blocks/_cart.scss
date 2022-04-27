@@ -18,24 +18,45 @@
     }
 
     .cart__goods {
+        width: 51%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include laptop-xl {
+            width: 55%;
+        }
+
+        @include laptop {
+            width: 60%;
+        }
+
+        @include tablet {
+            width: 95.6%;
+        }
     }
 
     .cart__item {
-        width: 652px;
+        width: 100%;
         height: 306px;
         box-shadow: $black;
         box-shadow: 20px 12px 18px 6px rgba(0, 0, 0, 0.15);
         margin: 0 0 40px 0;
 
-        @include tablet {
-            width: 734px;
+        @include laptop {
+            max-height: 270px;
         }
 
-        @include mobile {
-            width: 358px;
+        @include tablet {
+            width: 95.6%;
+        }
+
+        @include tablet-s {
+            max-height: 200px;
+        }
+
+        @include mobile-xl {
+            width: 95.5%;
             height: 188px;
         }
     }
@@ -44,12 +65,38 @@
         width: 100%;
         display: flex;
         position: relative;
+
+    }
+
+    .cart__item-img-block {
+        width: 40.2%;
+
+        @include tablet-s {
+            max-height: 200px;
+        }
+
+        @include mobile-xl {
+            max-height: 188px;
+        }
     }
 
     .cart__item-img {
+        width: 100%;
+
+        @include laptop {
+            max-height: 270px;
+        }
+
+        @include tablet-s {
+            max-height: 200px;
+        }
+
+        @include mobile-xl {
+            max-height: 188px;
+        }
+
         @include mobile {
-            width: 144px;
-            height: 188px;
+            height: 158px;
         }
     }
 
@@ -62,12 +109,12 @@
     }
 
     .cart__item-title {
-        width: 200px;
+        width: 80%;
         text-transform: uppercase;
         @include font(24px, 29px);
         margin: 0 0 42px 0;
 
-        @include mobile {
+        @include tablet-s {
             width: 130px;
             @include font(16px, 19px);
             margin: 0 0 26px 0;
@@ -79,7 +126,7 @@
         @include font(22px, 26px);
         color: #575757;
 
-        @include mobile {
+        @include tablet-s {
             @include font($line-height: 17px);
             margin: 0 0 4px 0;
         }
@@ -94,11 +141,15 @@
         text-align: center;
         @include font(18px, 21px);
 
+        @include tablet {
+            margin: 0 0 0 20px;
+            padding: 0;
+        }
+
         @include mobile {
             width: 24px;
             height: 15px;
             margin: 0 0 0 15px;
-            padding: 0;
             @include font(10px, 12px);
         }
     }
@@ -108,7 +159,7 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        top: 28px;
+        top: 25px;
         right: 22px;
         padding: 3px 3px 0 3px;
         fill: #575757;
@@ -141,7 +192,7 @@
     }
 
     .cart__btn {
-        width: 234px;
+        width: 36%;
         height: 49px;
         background-color: transparent;
         text-transform: uppercase;
@@ -176,19 +227,33 @@
     }
 
     .cart__delivery {
-        max-width: 366px;
+        width: 28.6%;
         height: 493px;
 
         @include tablet {
+            width: 95.6%;
             display: flex;
+            flex-wrap: wrap;
             height: 285px;
-            margin: 0 0 128px 0;
+            margin: 0 auto 128px auto;
+            height: auto;
         }
+
 
         @include mobile {
             /* display: flex; */
-            flex-wrap: wrap;
+            width: 95.5%;
             min-height: 493px;
+        }
+    }
+
+    .cart__address {
+        @include tablet {
+            width: 44%;
+        }
+
+        @include tablet-s {
+            width: 100%;
         }
     }
 
@@ -200,6 +265,12 @@
 
     .cart__form-input {
         margin: 21px 0 0 0;
+        width: 91.1%;
+        max-width: 328px;
+
+        @include tablet-s {
+            margin: 20px 150px 0 0;
+        }
     }
 
     .cart__form-btn {
@@ -231,29 +302,34 @@
     }
 
     .cart__payment {
-        width: 274px;
-        height: 180px;
+        width: 99%;
+        height: 175px;
         background-color: #F5F3F3;
         margin: 57px 0 0 0;
-        padding: 35px 43px 0 43px;
-        text-align: end;
+        text-align: center;
+        padding: 39px 0 0 0;
 
         @include tablet {
             margin: 40px 0 0 15px;
+            width: 44%;
         }
 
-        @include mobile {
+        @include tablet-s {
+            width: 90%;
             margin: 48px 0 0 0;
         }
+
+        @include mobile {}
     }
 
     .cart__payment-text {
         color: #4A4A4A;
         @include font(11px, 13px);
         text-transform: uppercase;
+        text-align: end;
 
         span {
-            margin: 0 0 0 20px;
+            margin: 0 35px 0 18px;
         }
     }
 
@@ -261,17 +337,23 @@
         color: $black;
         text-transform: uppercase;
         @include font(16px, 19px, 300);
-        margin: 12px 0 21px 0;
+        margin: 12px 0 18px 0;
+        text-align: end;
     }
 
     .cart__payment-subheading {
         font-weight: 700;
-        margin: 0 0 0 20px;
+        margin: 0 35px 0 18px;
+    }
+
+    hr {
+        width: 76.4%;
     }
 
     .cart__payment-btn {
-        width: 273px;
+        width: 76%;
         height: 50px;
+        max-width: 360px;
         @include font(16px, 19px, 300);
         text-transform: uppercase;
         color: $white;
