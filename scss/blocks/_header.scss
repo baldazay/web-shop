@@ -1,0 +1,144 @@
+.header {
+
+    .header__wrp {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+        position: relative;
+    }
+
+    .header__logo-wrp {
+        display: flex;
+    }
+
+    .header__logo-link {
+        display: block;
+        width: 46px;
+
+        &:hover,
+        &:focus {
+            outline: 2px solid $dark-pink;
+        }
+
+        &:active {
+            opacity: 0.4;
+            outline: 2px solid $dark-pink;
+        }
+    }
+
+    .header__search-form {
+        position: relative;
+    }
+
+    .header__search-input {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: 2px solid $white;
+        border-radius: 5px;
+        color: $white;
+        height: 35px;
+        top: 3px;
+        left: 40px;
+        padding: 0 0 0 40px;
+
+        &:focus {
+            outline: 2px solid $dark-pink;
+            border-radius: 5px;
+        }
+    }
+
+    .header__search-btn {
+        position: absolute;
+        top: 1px;
+        z-index: 2;
+        background-color: transparent;
+        border: none;
+        fill: #fff;
+        cursor: pointer;
+        margin: 5px 0 0 40px;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__list {
+        display: flex;
+    }
+
+    .header__item {
+        margin: 0 0 0 33px;
+    }
+
+    .header__nav-wrp {
+        position: relative;
+        padding: 2px 0 0 0;
+    }
+
+    .header__button {
+        border: none;
+        background-color: transparent;
+        fill: #fff;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+
+            &+.header__nav,
+            &+.header__nav {
+                display: block;
+            }
+        }
+    }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 220px;
+        max-height: 700px;
+        /* top: 54px; */
+        padding: 37px 0 30px 34px;
+        box-shadow: -1px 5px 12px -4px rgba(0, 0, 0, 0.54);
+
+        &:hover {
+            display: block;
+        }
+    }
+
+    .header__nav-button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 16px;
+        right: 30px;
+    }
+
+    .header__link {
+        fill: #fff;
+
+        &:hover,
+        &:focus {
+            fill: $dark-pink;
+        }
+
+        &:active {
+            fill: $sales-bkg-color;
+        }
+    }
+
+    .header__title {
+        @include font($font-weight: 700);
+        color: $black;
+        text-transform: uppercase;
+        margin: 0 0 4px 0;
+    }
+}
