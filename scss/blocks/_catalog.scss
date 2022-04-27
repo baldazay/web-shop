@@ -116,9 +116,16 @@
         color: $dark-pink;
         margin: 0 auto;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: #fff;
             background-color: $dark-pink;
+        }
+
+        &:active {
+            outline: 2px solid $dark-pink;
+            background-color: $black;
+            color: #fff;
         }
     }
 }

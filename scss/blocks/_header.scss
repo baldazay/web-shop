@@ -10,6 +10,10 @@
 
     .header__logo-wrp {
         display: flex;
+
+        @include tablet {
+            margin: 0 0 0 20px;
+        }
     }
 
     .header__logo-link {
@@ -35,7 +39,6 @@
         position: absolute;
         background-color: transparent;
         border: none;
-        outline: 2px solid $white;
         border-radius: 5px;
         color: $white;
         height: 35px;
@@ -46,6 +49,14 @@
         &:focus {
             outline: 2px solid $dark-pink;
             border-radius: 5px;
+        }
+
+        @include tablet {
+            width: 230px;
+        }
+
+        @include mobile {
+            width: 130px;
         }
     }
 
@@ -71,10 +82,18 @@
 
     .header__list {
         display: flex;
+
+        @include tablet {
+            margin: 0 20px 0 0;
+        }
     }
 
     .header__item {
         margin: 0 0 0 33px;
+
+        @include mobile {
+            margin: 0;
+        }
     }
 
     .header__nav-wrp {
@@ -108,10 +127,21 @@
         /* top: 54px; */
         padding: 37px 0 30px 34px;
         box-shadow: -1px 5px 12px -4px rgba(0, 0, 0, 0.54);
+        z-index: 2;
 
         &:hover {
             display: block;
         }
+
+        @include mobile {
+            width: 342px;
+            top: -23px;
+            right: -28px;
+        }
+    }
+
+    .display-block {
+        display: block;
     }
 
     .header__nav-button {
@@ -124,6 +154,10 @@
 
     .header__link {
         fill: #fff;
+
+        @include mobile {
+            display: none;
+        }
 
         &:hover,
         &:focus {

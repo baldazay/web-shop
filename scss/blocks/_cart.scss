@@ -1,10 +1,20 @@
 .cart {
-    height: 998px;
+    min-height: 998px;
 
     .cart__wrp {
         display: flex;
         justify-content: space-between;
         padding: 96px 0 0 0;
+
+        @include tablet {
+            flex-wrap: wrap;
+            padding: 59px 0 0 0;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+            padding: 39px 0 0 0;
+        }
     }
 
     .cart__goods {
@@ -19,6 +29,15 @@
         box-shadow: $black;
         box-shadow: 20px 12px 18px 6px rgba(0, 0, 0, 0.15);
         margin: 0 0 40px 0;
+
+        @include tablet {
+            width: 734px;
+        }
+
+        @include mobile {
+            width: 358px;
+            height: 188px;
+        }
     }
 
     .cart__item-wrp {
@@ -27,8 +46,19 @@
         position: relative;
     }
 
+    .cart__item-img {
+        @include mobile {
+            width: 144px;
+            height: 188px;
+        }
+    }
+
     .cart__item-property-wrp {
         margin: 22px 0 0 31px;
+
+        @include mobile {
+            margin: 13px 0 0 17px;
+        }
     }
 
     .cart__item-title {
@@ -36,12 +66,23 @@
         text-transform: uppercase;
         @include font(24px, 29px);
         margin: 0 0 42px 0;
+
+        @include mobile {
+            width: 130px;
+            @include font(16px, 19px);
+            margin: 0 0 26px 0;
+        }
     }
 
     .cart__item-property-descr {
         margin: 0 0 6px 0;
         @include font(22px, 26px);
         color: #575757;
+
+        @include mobile {
+            @include font($line-height: 17px);
+            margin: 0 0 4px 0;
+        }
     }
 
     input[type="number"] {
@@ -52,6 +93,14 @@
         padding: 0 0 0 12px;
         text-align: center;
         @include font(18px, 21px);
+
+        @include mobile {
+            width: 24px;
+            height: 15px;
+            margin: 0 0 0 15px;
+            padding: 0;
+            @include font(10px, 12px);
+        }
     }
 
     .cart__item-btn {
@@ -80,6 +129,15 @@
         display: flex;
         justify-content: space-between;
         margin: 32px 0 0 0;
+
+        @include tablet {
+            justify-content: center;
+            margin: 30px 0 64px 0;
+        }
+
+        @include mobile {
+            justify-content: space-between;
+        }
     }
 
     .cart__btn {
@@ -91,6 +149,14 @@
         outline: 1px solid #A4A4A4;
         cursor: pointer;
         @include font;
+        margin: 0 25px;
+
+        @include mobile {
+            width: 174px;
+            height: 32px;
+            @include font(12px, 14px);
+            margin: 0;
+        }
 
         &:hover,
         &:focus {
@@ -112,6 +178,18 @@
     .cart__delivery {
         max-width: 366px;
         height: 493px;
+
+        @include tablet {
+            display: flex;
+            height: 285px;
+            margin: 0 0 128px 0;
+        }
+
+        @include mobile {
+            /* display: flex; */
+            flex-wrap: wrap;
+            min-height: 493px;
+        }
     }
 
     .cart__form-title {
@@ -159,6 +237,14 @@
         margin: 57px 0 0 0;
         padding: 35px 43px 0 43px;
         text-align: end;
+
+        @include tablet {
+            margin: 40px 0 0 15px;
+        }
+
+        @include mobile {
+            margin: 48px 0 0 0;
+        }
     }
 
     .cart__payment-text {

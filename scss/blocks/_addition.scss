@@ -1,6 +1,14 @@
 .addition {
     background-color: $black;
-    height: 341px;
+    min-height: 341px;
+
+    @include tablet {
+        padding: 0 210px 64px 210px;
+    }
+
+    @include mobile {
+        padding: 0 18px 81px 18px;
+    }
 
     .addition__list {
         display: flex;
@@ -13,12 +21,25 @@
         height: 134px;
         text-align: center;
         margin: 103px 0 0 0;
+
+        @include tablet {
+            margin: 48px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 48px 0 0 0;
+        }
+
     }
 
     .addition__title {
         @include font(20px, 24px);
         color: #FBFBFB;
         margin: 28px 0 16px 0;
+
+        @include tablet {}
+
+        @include mobile {}
     }
 
     .addition__text {

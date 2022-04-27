@@ -1,10 +1,15 @@
 .footer__copy {
     background-color: $black;
-    height: 79px;
+    min-height: 79px;
 
     .footer__copy-wrp {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
     }
 
     .footer__copy-text {
@@ -12,6 +17,11 @@
         @include font(16px, 19px);
         color: $white;
         margin: 30px 0 0 0;
+
+        @include mobile {
+            width: 251px;
+            margin: 40px auto 9px auto;
+        }
     }
 
     .footer__copy-list {
@@ -19,6 +29,10 @@
         width: 148px;
         justify-content: space-between;
         margin: 24px 0 0 0;
+
+        @include mobile {
+            margin: 43px auto 0 auto;
+        }
     }
 
 
