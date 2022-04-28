@@ -1,0 +1,71 @@
+.carousel {
+    background-color: #f7f7f7;
+
+    .carousel-wrp {
+        position: relative;
+
+        @include mobile-xl {
+            max-height: 624px;
+            padding: 84px 0;
+        }
+    }
+
+    .carousel__img-wrp {
+        width: 37.3%;
+        max-height: 777px;
+        margin: 0 auto 41px auto;
+
+        @include tablet {
+            width: 60.7%;
+            max-height: 624px;
+            margin: 0 auto;
+        }
+
+        @include mobile-xl {
+            width: 100%;
+            max-height: 454px;
+            background-color: #f7f7f7;
+        }
+    }
+
+    .carousel__img {
+        width: 100%;
+        margin: 10px 0 60px 0;
+        background-color: #f7f7f7;
+
+        @include tablet {
+            margin: 0 auto;
+        }
+    }
+
+    .carousel__btn {
+        position: absolute;
+        width: 47px;
+        height: 47px;
+        border: none;
+        background-color: rgba(42, 42, 42, 0.15);
+        padding: 0;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: 2px solid $dark-pink;
+        }
+
+        &:active {
+            fill: $dark-pink;
+            outline: none;
+        }
+    }
+
+    .btn-left {
+        left: 2px;
+        top: 50%;
+    }
+
+    .btn-right {
+        right: 2px;
+        top: 50%;
+    }
+
+}
