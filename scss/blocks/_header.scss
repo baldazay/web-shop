@@ -57,7 +57,7 @@
                 width: 200px;
             }
 
-            @include mobile {
+            @include mobile-xl {
                 width: 120px;
             }
         }

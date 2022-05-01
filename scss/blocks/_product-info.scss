@@ -1,0 +1,132 @@
+.product-info {
+    max-height: 601px;
+    text-align: center;
+    background-color: #fff;
+
+    @include tablet {
+        border: 1px solid #EAEAEA;
+    }
+
+    @include mobile-xl {
+        border: 1px solid #EAEAEA;
+    }
+
+    .product-info__wrp {
+        border: 1px solid #EAEAEA;
+        transform: translateY(-120px);
+        z-index: 1;
+        background-color: #fff;
+
+        @include tablet {
+            transform: translateY(0);
+            border: none;
+        }
+    }
+
+    .product-info__heading {
+        @include font($font-weight: 300);
+        text-transform: uppercase;
+        margin: 64px 0 0 0;
+    }
+
+    .product-info__title-devider {
+        width: 63px;
+        height: 3px;
+        background-color: $dark-pink;
+        margin: 12px auto;
+    }
+
+    .product-info__title {
+        @include font(18px, 22px, 300);
+        text-transform: uppercase;
+    }
+
+    .product-info__text {
+        @include font($font-weight: 300);
+        max-width: 564px;
+        margin: 48px auto 0 auto;
+    }
+
+    .product-info__price {
+        @include font(24px, 29px, 300);
+        margin: 32px 0 0 0;
+    }
+
+    .product-info__devider {
+        height: 1px;
+        width: 56.2%;
+        background-color: #EAEAEA;
+        margin: 65px auto;
+
+        @include tablet {
+            width: 83.5%;
+        }
+
+        @include mobile {
+            width: 46.7%;
+        }
+    }
+
+    .product-info__filter-list {
+        margin: 0 23px 0 0;
+        background-color: transparent;
+        border: 0;
+        color: #6F6E6E;
+        @include font;
+
+        @include tablet {
+            @include font(12px, 15px);
+        }
+
+        @include tablet-s {
+            margin: 0 10px 0 0;
+        }
+
+        @include mobile-xl {
+            @include font(10px, 12px);
+            margin: 0;
+        }
+    }
+
+    .product-info__btn {
+        @include font(16px, 19px);
+        width: 211px;
+        height: 47px;
+        border: 1px solid #FF6A6A;
+        @include font(16px, 19px);
+        text-decoration: none;
+        color: $dark-pink;
+        transition: background-color 1s linear;
+        cursor: pointer;
+        fill: $dark-pink;
+        background-color: transparent;
+        position: relative;
+        text-align: left;
+        padding: 5px 0 0 23px;
+        margin: 49px 0 65px 0;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            fill: #fff;
+            background-color: $dark-pink;
+        }
+
+        &:active {
+            outline: 2px solid $dark-pink;
+            transition: background-color 0.06s linear;
+            background-color: $black;
+            color: #fff;
+            fill: #fff;
+        }
+
+    }
+
+    .product-info__btn-value {
+        @include font(16px, 19px);
+        margin: 0 0 0 23px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

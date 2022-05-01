@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'reset';
 @import 'general';
+@import 'fonts';
 
 @import 'blocks/addition';
 @import 'blocks/brand';
@@ -14,3 +15,6 @@
 @import 'blocks/page-heading';
 @import 'blocks/reg';
 @import 'blocks/sales';
+@import 'blocks/carousel';
+@import 'blocks/product-info';
+@import 'blocks/related';
