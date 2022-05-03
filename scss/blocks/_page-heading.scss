@@ -7,7 +7,7 @@
         text-transform: uppercase;
         padding: 60px 0 0 0;
 
-        @include mobile {
+        @include mobile-xl {
             text-align: center;
         }
     }
