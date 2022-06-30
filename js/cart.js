@@ -14,36 +14,32 @@ itemAddBtns.forEach((button) => {
         let productPrice = button.closest('.stock__item-wrp').querySelector('h4').innerHTML;
         let productId = button.dataset.id;
         insertProductDataToArray(productId, productName, productPrice);
-        /* cleanCart(cartItemRow); */
-        insertItemInCart(products[productId]);
-        /* cartTotalPrice.innerHTML = */
+        cleanCart();
+        products.map(insertItemInCart);
+        cartTotalPrice.innerHTML = calculateWholePrice().toFixed(2) + "$";
     });
 });
 
 
-const cartBlock = document.querySelector('.shop-cart');
+const wholeShopPrice = document.querySelector('.shop-cart-price');
 
 
 function insertItemInCart(object) {
     let price = object.price.slice(1);
     let totalPrice = object.amount * price;
-    if (object[productId] === undefined) {
-        cartBlockHeader.insertAdjacentHTML('afterend',
-            `<div class="shop-cart-row">
-                <div class= "shop-cart-col">${object.name}</div>
-                <div class="shop-cart-col">${object.amount}</div>
-                <div class="shop-cart-col">${price}$</div>
-                <div class="shop-cart-col">${totalPrice}$</div>
-            </div >`
-        )
-    } /* else {
-        let
-    } */
+    wholeShopPrice.insertAdjacentHTML('beforebegin',
+        `<div class="shop-cart-row">
+            <div class= "shop-cart-col">${object.name}</div>
+            <div class="shop-cart-col item-amount">${object.amount}</div>
+            <div class="shop-cart-col">${price}$</div>
+            <div class="shop-cart-col item-totalPrice">${totalPrice.toFixed(2)}$</div>
+        </div >`
+    );
 }
 
 
 function insertProductDataToArray(id, productName, productPrice) {
-    if (products[id] === undefined) {
+    if (!products[id]) {
         products[id] =
         {
             name: productName,
@@ -57,12 +53,22 @@ function insertProductDataToArray(id, productName, productPrice) {
 
 
 let cartBlockHeader = document.querySelector('.shop-cart-header');
-let cartItemRow = document.querySelector('.shop-cart-row');
 
-function cleanCart(element) {
-    cartBlock.removeChild(element);
+
+function cleanCart() {
+    let cartItemRows = document.querySelectorAll('.shop-cart-row');
+    cartItemRows.forEach((cartItemRow) => {
+        cartItemRow.remove();
+    });
 }
 
 function calculateWholePrice() {
-
+    let sum = 0;
+    for (let product of products) {
+        if (product) {
+            console.log(product);
+            sum += product.amount * product.price.slice(1);
+        }
+    }
+    return sum;
 }

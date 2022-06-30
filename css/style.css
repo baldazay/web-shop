@@ -1268,7 +1268,7 @@ header {
   position: absolute;
   top: 60px;
   right: 0;
-  max-width: 400px;
+  max-width: 500px;
   background-color: #F8F8F8;
   border: 2px solid #222222;
   padding: 10px 30px;
@@ -1279,7 +1279,7 @@ header {
 .header .shop-cart-header,
 .header .shop-cart-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 25%);
   height: 25px;
   margin: 0 auto;
 }
@@ -1293,6 +1293,8 @@ header {
   margin: 0;
 }
 .header .shop-cart-price {
+  padding: 10px 0 0 0;
+  border-top: 2px solid gray;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
